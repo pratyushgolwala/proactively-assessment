@@ -12,6 +12,9 @@ function Navbar() {
     <nav className="navbar">
       <img src="/images/logo.png" alt="Logo" />
       <span className="navbar-title">ProVital</span>
+       <button className="hamburger-btn" onClick={toggleMobileMenu}>
+          <span className="hamburger-icon"></span>
+        </button>
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="mobile-menu">
