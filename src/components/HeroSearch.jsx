@@ -6,6 +6,7 @@ const leftImages = [
   "/images/left3.png",
   "/images/left4.png",
 ];
+
 const rightImages = [
   "/images/right1.png",
   "/images/right2.png",
@@ -13,25 +14,41 @@ const rightImages = [
   "/images/right4.png",
 ];
 
+const mobileImages = [...leftImages, ...rightImages];
+
 function HeroSearch() {
   return (
     <>
-      <div className="hero-images">
+      {/* Desktop Images */}
+      <div className="hero-images desktop-only">
         <div className="hero-image-col hero-image-col-left">
           {[...leftImages, ...leftImages, ...leftImages].map((src, i) => (
-            <div className="hero-image-wrapper" key={i}>
+            <div className="hero-image-wrapper" key={`left-${i}`}>
               <img src={src} alt="" className="hero-image" />
             </div>
           ))}
         </div>
         <div className="hero-image-col hero-image-col-right">
           {[...rightImages, ...rightImages, ...rightImages].map((src, i) => (
-            <div className="hero-image-wrapper" key={i}>
+            <div className="hero-image-wrapper" key={`right-${i}`}>
               <img src={src} alt="" className="hero-image" />
             </div>
           ))}
         </div>
       </div>
+
+      {/* Mobile Images */}
+      <div className="hero-images-mobile mobile-only">
+        <div className="hero-image-row">
+          {[...mobileImages, ...mobileImages, ...mobileImages].map((src, i) => (
+            <div className="hero-image-wrapper" key={`mobile-${i}`}>
+              <img src={src} alt="" className="hero-image" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Hero Content */}
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-text">
@@ -43,6 +60,7 @@ function HeroSearch() {
               Optimize your lifestyle and reverse chronic diseases.
             </p>
           </div>
+
           <form className="hero-searchbar">
             <input
               className="hero-input"
@@ -68,6 +86,7 @@ function HeroSearch() {
           </form>
         </div>
       </section>
+
       <div className="hero-gradient-bar"></div>
     </>
   );

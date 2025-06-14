@@ -49,7 +49,6 @@ const pillars = [
     description:
       "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.",
   },
-  // Add more pillars as needed
 ];
 
 const tags = [
@@ -60,59 +59,55 @@ const tags = [
   "Social connection",
   "Substance abuse",
 ];
+
 export default function Working() {
   return (
-    <>
-      <div className="howitworks-section">
-        <div className="howitworks-header">
-          <div className="howitworks-title">
-            <span className="howitworks">HOW IT WORKS</span>
-            <h2>
-              <span className="howitworks-highlight">
-                Lifestyle as medicine
-              </span>
-              <span className="howitworks-normal">: The six pillars</span>
-            </h2>
-          </div>
-          <div className="howitworks-nav">
-            <button className="howitworks-arrow">{/* ← */}&#8592;</button>
-            <button className="howitworks-arrow">{/* → */}&#8594;</button>
-          </div>
+    <div className="howitworks-section">
+      <div className="howitworks-header">
+        <div className="howitworks-title">
+          <span className="howitworks">HOW IT WORKS</span>
+          <h2>
+            <span className="howitworks-highlight">Lifestyle as medicine</span>
+            <span className="howitworks-normal">: The six pillars</span>
+          </h2>
         </div>
-        <div className="howitworks-tags">
-          {tags.map((tag, i) => (
-            <button
-              key={tag}
-              className={`howitworks-tag${i === 0 ? " active" : ""}`}
-            >
-              {tag}
-            </button>
-          ))}
+        <div className="howitworks-nav desktop-only">
+          <button className="howitworks-arrow">&#8592;</button>
+          <button className="howitworks-arrow">&#8594;</button>
         </div>
+      </div>
 
-        <div className="howitworks-cards">
-          {pillars.map((pillar, i) => (
-            <div className="howitworks-card" key={pillar.label}>
-              <div className="howitworks-card-img">
-                <img src={pillar.img} alt={pillar.label} />
-                <div className={`howitworks-stat ${pillar.statClass}`}>
-                  <img
-                    src={pillar.icomImg}
-                    alt={`${pillar.label} icon`}
-                    className="howitworks-stat-icon"
-                  />
-                  <span>{pillar.stat}</span>
-                </div>
-              </div>
-              <div className="howitworks-card-content">
-                <div className="howitworks-card-title">{pillar.label}</div>
-                <div className="howitworks-card-desc">{pillar.description}</div>
+      <div className="howitworks-tags desktop-only">
+        {tags.map((tag, i) => (
+          <button
+            key={tag}
+            className={`howitworks-tag${i === 0 ? " active" : ""}`}
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
+
+      <div className="howitworks-cards">
+        {pillars.map((pillar) => (
+          <div className="howitworks-card" key={pillar.label}>
+            <div className="howitworks-card-img">
+              <img src={pillar.img} alt={pillar.label} />
+              <div className={`howitworks-stat ${pillar.statClass}`}>
+                <img
+                  src={pillar.icomImg}
+                  alt={`${pillar.label} icon`}
+                  className="howitworks-stat-icon"
+                />
               </div>
             </div>
-          ))}
-        </div>
-
+            <div className="howitworks-card-content">
+              <h3 className="howitworks-card-title">{pillar.label}</h3>
+              <p className="howitworks-card-desc">{pillar.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
