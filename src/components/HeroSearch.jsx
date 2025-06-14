@@ -1,16 +1,16 @@
 import React from "react";
 
 const leftImages = [
-  "/images/left1.jpg",
-  "/images/left2.jpg",
-  "/images/left3.jpg",
-  "/images/left4.jpg",
+  "/images/left1.png",
+  "/images/left2.png",
+  "/images/left3.png",
+  "/images/left4.png",
 ];
 const rightImages = [
-  "/images/right1.jpg",
-  "/images/right2.jpg",
-  "/images/right3.jpg",
-  "/images/right4.jpg",
+  "/images/right1.png",
+  "/images/right2.png",
+  "/images/right3.png",
+  "/images/right4.png",
 ];
 
 function HeroSearch() {

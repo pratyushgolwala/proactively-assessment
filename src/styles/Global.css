@@ -1,6 +1,6 @@
-/*Navbar Styles*/
 @import url('https://fonts.googleapis.com/css?family=Inter:600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+/*.........Navbar Styles.........*/
 .navbar {
   width: 100%;
   background: #fff;
@@ -177,7 +177,7 @@
 
 
 
-/*Hero Section Styles*/
+/*......Hero Section Styles.......*/
 
 .hero-section {
   width: 100vw;
@@ -192,7 +192,7 @@
   height: 600px;
 }
 
-/* ...existing code... */
+
 
 .hero-images {
   position: absolute;
@@ -213,7 +213,7 @@
   flex-direction: column;
   gap: 30px; /* gap between images in a column */
   width: 240px;
-  height: 640px;
+  height: 633px;
   border-radius: 0;
   position: relative;
 }
@@ -228,7 +228,7 @@
   flex-shrink: 0;
 }
 
-/* ...rest of your code... */
+
 
 .hero-image {
   width: 100%;
@@ -349,7 +349,7 @@
 }
 
 .hero-gradient-bar {
-  width: 120vw;
+  width: 112vw;
   height: 32px;
   position: absolute;
   left: -10vw;
@@ -363,7 +363,7 @@
 
 
 
-/*Workspace Section Styles*/
+/*...........Workspace Section Styles............*/
 
 
 .howitworks-section {
